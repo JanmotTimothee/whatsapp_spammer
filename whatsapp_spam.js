@@ -7,12 +7,10 @@ function whatsAppText(message) {
 	document.querySelector('[data-icon="send"]').click()﻿;
 }
 
-function spam(message, loop) {
-	var delay = 1000; // 1 second
-	
-	for (var i = 0; i < loop; i++){
-		window.setTimeout(function(){
+function spam(message, loop, delay = 1000) {
+	for (var i = 0; i < loop; i++) {
+		window.setTimeout(function() {
 			whatsAppText(message);
-		}, delay*i);
+		}, delay * i);
 	}
 }
