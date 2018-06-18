@@ -23,4 +23,4 @@ case $CURRENT_BRANCH in
   git checkout master ＆＆ git merge 2.3
   git checkout $CURRENT_BRANCH
   ;;
-esac
+esac 
