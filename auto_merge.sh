@@ -9,18 +9,18 @@ echo Automatically merging commit $LAST_COMMIT from $CURRENT_BRANCH rippling to 
 
 case $CURRENT_BRANCH in
 2.1)
-  git checkout 2.2 ＆＆ git merge $CURRENT_BRANCH
-  git checkout 2.3 ＆＆ git merge 2.2
-  git checkout master ＆＆ git merge 2.3
+  git checkout 2.2 && git merge $CURRENT_BRANCH
+  git checkout 2.3 && git merge 2.2
+  git checkout master && git merge 2.3
   git checkout $CURRENT_BRANCH
   ;;
 2.2)
-  git checkout 2.3 ＆＆ git merge 2.2
-  git checkout master ＆＆ git merge 2.3
+  git checkout 2.3 && git merge 2.2
+  git checkout master && git merge 2.3
   git checkout $CURRENT_BRANCH
   ;;
-2.3)
-  git checkout master ＆＆ git merge 2.3
+test2)
+  git checkout master && git merge test2
   git checkout $CURRENT_BRANCH
   ;;
 esac 
